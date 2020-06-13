@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from './Images/background.svg'
 import './App.css';
-import Signup from './Components/Signup'
-import Login from './Components/Login'
+import Routes from './Components/Routes'
+
 
 
 const divStyle = {
@@ -14,16 +14,7 @@ const divStyle = {
 function App() {
   return (
     <div className="App" style={divStyle} >
-      <div id="landing-page-container">
-        <h1 id="page-title">Monster Money</h1>
-        <div id="signup-signin-container">
-          <button>Login</button>
-          <button>Signup</button>
-        </div>
-      </div>
-     
-     {/* <Signup/>
-     <Login/> */}
+      <Routes/>
     </div>
   );
 }
