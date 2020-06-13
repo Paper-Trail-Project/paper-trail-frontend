@@ -15,9 +15,9 @@
 
 .Login-input, .Signup-input{
     display: flex;
-    width: 360px;
+    width: 370px;
     padding: 12px;
-    margin: 15px;
+    margin: 12px;
     border: 1px solid grey;
     border-radius: 20px;
 }

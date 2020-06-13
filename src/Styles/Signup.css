@@ -13,14 +13,13 @@
     margin-top: 100px;
 }
 
-.Signup-input{
+/* .Signup-input{
     display: flex;
     width: 360px;
     padding: 12px;
-    margin: 10px;
     border: 1px solid grey;
     border-radius: 20px;
-}
+} */
 
 .Signup-input:focus{
 outline: none;
