@@ -1,5 +1,35 @@
 .App {
 display: flex;
 justify-content: center;
+height: 100vh;
+width: 100vw;
+overflow-y: hidden;
+overflow-x: hidden;
 }
 
+#page-title{
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+
+#landing-page-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -190px;
+}
+
+#signup-signin-container{
+display: flex;
+}
+
+button{
+    height: 40px;
+    width: 150px;
+    border-radius: 30px;
+    border: 1px solid grey;
+    margin: 10px;
+}

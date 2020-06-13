@@ -10,11 +10,6 @@
     border-radius: 15px;
 }
 
-#Signup-name-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 #Signup-form{
     width: 400px;
@@ -32,16 +27,10 @@
     border-radius: 5px;
 }
 
-.Signup-input-name{
-    display: flex;
-    width: 130px;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-}
 
 #Signup-button{
     width: 100px;
     padding: 5px;
     margin: 10px;
 }
+
