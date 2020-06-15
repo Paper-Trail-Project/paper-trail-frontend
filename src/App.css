@@ -9,7 +9,8 @@ overflow-x: hidden;
 
 #page-title{
     font-size: 60px;
-    margin-bottom: 30px;
+    margin-top: 230px;
+    position: absolute;
 }
 
 #landing-page-container{
@@ -17,13 +18,14 @@ overflow-x: hidden;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin-top: -190px;
 }
 
 #signup-signin-container{
 display: flex;
+height: 80vh;
+justify-content: center;
+align-items: center;
 }
 
 button{

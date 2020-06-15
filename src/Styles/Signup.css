@@ -1,36 +1,46 @@
 #Signup-container{
     display: flex;
-    flex-direction: column;
-    width: 500px;
-    height: 500px;
     justify-content: center;
     align-items: center;
-    background-color: aliceblue;
-    margin: 20px;
-    border-radius: 15px;
+    margin-top: 220px;
 }
 
 
 #Signup-form{
-    width: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin-top: 100px;
 }
 
-.Signup-input{
+/* .Signup-input{
     display: flex;
-    width: 300px;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
+    width: 360px;
+    padding: 12px;
+    border: 1px solid grey;
+    border-radius: 20px;
+} */
+
+.Signup-input:focus{
+outline: none;
 }
 
 
 #Signup-button{
-    width: 100px;
+    width: 120px;
     padding: 5px;
     margin: 10px;
+    background-color: rgb(141, 189, 201)
 }
 
+button:focus{
+    outline: none;
+}
+
+button:hover{
+    background-color:  rgb(206, 228, 235)
+}
+
+#Signup-button:hover{
+    background-color:  rgb(206, 228, 235)
+}
