@@ -3,6 +3,7 @@ import { BrowserRouter as Router,Switch, Route, Redirect} from "react-router-dom
 import Signup from './Signup'
 import Login from './Login'
 import LandingPage from './LandingPage'
+import ChooseMonsterPage from './ChooseMonsterPage'
 
 
 export default function Routes() {
@@ -12,6 +13,7 @@ export default function Routes() {
                 <Switch>
                     <Route exact path='/' component={LandingPage}/>
                     <Route exact path='/login' component={Login}/>
+                    <Route exact path='/choose_monster' component={ChooseMonsterPage}/>
                     <Route exact path='/signup' component={Signup}/>
                     <Route render={() => <Redirect to='/' />}/>
                 </Switch>

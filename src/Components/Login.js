@@ -1,7 +1,17 @@
 import React, { useState } from 'react'
 import '../Styles/Login.css'
+import Image from '../Images/background.svg'
+
 
 export default function Login() {
+
+    const divStyle = {
+        backgroundImage: 'url(' + Image + ')',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      };
+
+
 
     console.log(localStorage.getItem("token"))
 
@@ -32,7 +42,7 @@ export default function Login() {
 
 
     return (
-        <div id="landing-page-container">
+        <div id="landing-page-container" style={divStyle}>
             <h1 id="page-title">Monster Money</h1>
             <div id="Login-container">
             <form id="Login-form" onSubmit={handleSubmit}>
