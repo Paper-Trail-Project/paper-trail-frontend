@@ -7,7 +7,7 @@ export default function Login(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.login(userData);
+    props.login(userData, props.history);
     // console.log(userData)
   };
 

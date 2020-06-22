@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router,Switch, Route, Redirect} from "react-router-dom";
+import { BrowserRouter as Router,Switch, Route, Redirect } from "react-router-dom";
 import Signup from './Signup'
 import Login from './Login'
 import LandingPage from './LandingPage'
@@ -8,7 +8,10 @@ import PrivateRoute from './PrivateRoute';
 export default function Routes(props) {
 
 
-    const login = (user) => {
+  //need to revalidate a user upon refresh. Either componentDidMount or useEffect.
+
+    const login = (user, history) => {
+
         // console.log("login function has been reached", user)
         fetch('http://localhost:8000/login', {
           method: "POST",
@@ -19,7 +22,10 @@ export default function Routes(props) {
           //will make a key of user, will be equal to the information we send (object we pass in as user)
         })
         .then(response => response.json())
-        .then(console.log)
+        .then(({ foundUser, token }) => {
+          localStorage.setItem('token', token)
+          history.push('/home')
+        })
       }
 
     return (
