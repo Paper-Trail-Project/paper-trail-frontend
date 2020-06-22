@@ -1,0 +1,29 @@
+#choose-monster-page{
+    width: 100vw;
+    height: 100vh;
+}
+
+#choose-monster-container{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+.monster-li{
+    margin: 30px;
+}
+
+.selected-monster{
+    margin: 30px;
+    font-size: 30px;
+}
+
+#monster-selection{
+    display: flex;
+}
+
+#monster-card-container{
+    margin: 30px;
+}
