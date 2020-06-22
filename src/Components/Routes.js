@@ -9,23 +9,18 @@ export default function Routes(props) {
 
 
     const login = (user) => {
-        console.log("login function has been reached", user)
+        // console.log("login function has been reached", user)
         fetch('http://localhost:8000/login', {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify({user})
+          body: JSON.stringify(user)
           //will make a key of user, will be equal to the information we send (object we pass in as user)
         })
         .then(response => response.json())
-        .then(response => console.log(response))
+        .then(console.log)
       }
-
-      //     .then(({token}) => {
-//         localStorage.setItem("token", token)
-//         console.log("here it is!", localStorage.getItem("token"))
-//     })
 
     return (
         <div>
