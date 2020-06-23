@@ -4,6 +4,8 @@ import Signup from './Signup'
 import Login from './Login'
 import LandingPage from './LandingPage'
 import PrivateRoute from './PrivateRoute';
+import ChooseMonsterPage from './ChooseMonsterPage'
+
 
 export default function Routes(props) {
 
@@ -49,12 +51,16 @@ export default function Routes(props) {
         <div>
             <Router>
                 <Switch>
+
                     <PrivateRoute exact path='/home' />
                     {/* if you want to pass a prop down, change component to render */}
                     {/* render takes a function, this function will return the component you want to go to (login) */}
                     <Route exact path='/login' render={(routerProps) => <Login {...routerProps} login={login}/>} />
                     <Route exact path='/signup' render={(routerProps) => <Signup {...routerProps} signup={signup}/>}/>
                     <Route path='/' component={LandingPage}/>
+                    <Route render={() => <Redirect to='/' />}/>
+                    <Route exact path='/choose_monster' component={ChooseMonsterPage}/>
+                       
                 </Switch>
             </Router>
             

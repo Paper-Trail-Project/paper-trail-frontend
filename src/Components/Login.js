@@ -1,9 +1,18 @@
+
 import React, { useState } from "react";
 import "../Styles/Login.css";
+import Image from '../Images/background.svg'
+
 
 export default function Login(props) {
 
   const [userData, setUserData] = useState({ username: "", password: "" });
+
+    const divStyle = {
+        backgroundImage: 'url(' + Image + ')',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -16,8 +25,9 @@ export default function Login(props) {
     setUserData({ ...userData, [name]: value });
   };
 
+  
   return (
-    <div id="landing-page-container">
+    <div id="landing-page-container" style={divStyle} >
       <h1 id="page-title">Monster Money</h1>
       <div id="Login-container">
         <form id="Login-form" onSubmit={handleSubmit}>
