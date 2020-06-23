@@ -6,10 +6,13 @@ import Routes from './Components/Routes'
 
 
 
+
+
 function App() {
   return (
-    <div className="App" >
-      <Routes/>
+    
+    <div className="App" style={divStyle} >
+      <Routes />
     </div>
   );
 }
