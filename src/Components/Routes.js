@@ -24,8 +24,10 @@ export default function Routes(props) {
           //will make a key of user, will be equal to the information we send (object we pass in as user)
         })
         .then(response => response.json())
-        .then(({ foundUser, token }) => {
+        .then(({ name, username, token }) => {
           localStorage.setItem('token', token)
+          localStorage.setItem('name', name)
+          localStorage.setItem('username', username)
           history.push('/home')
         })
       }
@@ -57,9 +59,9 @@ export default function Routes(props) {
                     {/* render takes a function, this function will return the component you want to go to (login) */}
                     <Route exact path='/login' render={(routerProps) => <Login {...routerProps} login={login}/>} />
                     <Route exact path='/signup' render={(routerProps) => <Signup {...routerProps} signup={signup}/>}/>
+                    <Route exact path='/choose_monster' render={(routerProps) => <ChooseMonsterPage {...routerProps}/>}/>
                     <Route path='/' component={LandingPage}/>
                     <Route render={() => <Redirect to='/' />}/>
-                    <Route exact path='/choose_monster' component={ChooseMonsterPage}/>
                        
                 </Switch>
             </Router>
