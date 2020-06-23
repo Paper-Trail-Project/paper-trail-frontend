@@ -28,6 +28,23 @@ export default function Routes(props) {
         })
       }
 
+    const signup = (newUser, history) => {
+
+      fetch('http://localhost:8000/users', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newUser)
+      })
+      .then(response => response.json())
+      .then(response => history.push('/home'))
+      // .then(response => {
+      //   localStorage.setItem('token', response.password)
+      //   history.push('/home')
+      // })
+    }
+
     return (
         <div>
             <Router>
@@ -36,7 +53,7 @@ export default function Routes(props) {
                     {/* if you want to pass a prop down, change component to render */}
                     {/* render takes a function, this function will return the component you want to go to (login) */}
                     <Route exact path='/login' render={(routerProps) => <Login {...routerProps} login={login}/>} />
-                    <Route exact path='/signup' component={Signup}/>
+                    <Route exact path='/signup' render={(routerProps) => <Signup {...routerProps} signup={signup}/>}/>
                     <Route path='/' component={LandingPage}/>
                 </Switch>
             </Router>
