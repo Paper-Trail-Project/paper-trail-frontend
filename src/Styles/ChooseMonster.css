@@ -26,4 +26,11 @@ height: 100vh;
 
 #monster-card-container{
     margin: 30px;
+    background-color: rgb(231, 247, 231);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 250px;
 }
