@@ -5,6 +5,7 @@ import Login from './Login'
 import LandingPage from './LandingPage'
 import PrivateRoute from './PrivateRoute';
 import ChooseMonsterPage from './ChooseMonsterPage'
+import Encyclopedia from './Encyclopedia'
 
 
 export default function Routes(props) {
@@ -14,7 +15,6 @@ export default function Routes(props) {
 
     const login = (user, history) => {
 
-        // console.log("login function has been reached", user)
         fetch('http://localhost:8000/login', {
           method: "POST",
           headers: {
@@ -24,11 +24,12 @@ export default function Routes(props) {
           //will make a key of user, will be equal to the information we send (object we pass in as user)
         })
         .then(response => response.json())
-        .then(({ name, username, token, id}) => {
+        .then(({ name, username, token, id, money }) => {
           localStorage.setItem('token', token)
           localStorage.setItem('name', name)
           localStorage.setItem('username', username)
           localStorage.setItem('id', id)
+          localStorage.setItem('money', money)
           history.push('/home')
         })
       }
@@ -61,6 +62,7 @@ export default function Routes(props) {
                     <Route exact path='/login' render={(routerProps) => <Login {...routerProps} login={login}/>} />
                     <Route exact path='/signup' render={(routerProps) => <Signup {...routerProps} signup={signup}/>}/>
                     <Route exact path='/choose_monster' render={(routerProps) => <ChooseMonsterPage {...routerProps}/>}/>
+                    <Route exact path='/encyclopedia' render={(routerProps) => <Encyclopedia {...routerProps} />}/>
                     <Route path='/' component={LandingPage}/>
                     <Route render={() => <Redirect to='/' />}/>
                        
