@@ -25,10 +25,11 @@ export default function Routes(props) {
           //will make a key of user, will be equal to the information we send (object we pass in as user)
         })
         .then(response => response.json())
-        .then(({ name, username, token }) => {
+        .then(({ name, username, token, id}) => {
           localStorage.setItem('token', token)
           localStorage.setItem('name', name)
           localStorage.setItem('username', username)
+          localStorage.setItem('id', id)
           history.push('/home')
         })
       }
