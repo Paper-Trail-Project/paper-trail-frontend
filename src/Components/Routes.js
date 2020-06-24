@@ -5,6 +5,7 @@ import Login from './Login'
 import LandingPage from './LandingPage'
 import PrivateRoute from './PrivateRoute';
 import ChooseMonsterPage from './ChooseMonsterPage'
+import Encyclopedia from './Encyclopedia'
 
 
 export default function Routes(props) {
@@ -60,6 +61,7 @@ export default function Routes(props) {
                     <Route exact path='/login' render={(routerProps) => <Login {...routerProps} login={login}/>} />
                     <Route exact path='/signup' render={(routerProps) => <Signup {...routerProps} signup={signup}/>}/>
                     <Route exact path='/choose_monster' render={(routerProps) => <ChooseMonsterPage {...routerProps}/>}/>
+                    <Route exact path='/encyclopedia' render={(routerProps) => <Encyclopedia {...routerProps} />}/>
                     <Route path='/' component={LandingPage}/>
                     <Route render={() => <Redirect to='/' />}/>
                        
