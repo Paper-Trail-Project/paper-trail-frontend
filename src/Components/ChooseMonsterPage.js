@@ -30,6 +30,26 @@ export default class ChooseMonsterPage extends Component {
     handleClick= (monsterObj) => {
             this.setState({selectedMonster: monsterObj})
     }
+
+    handleMonsterUpdate = () => {
+        const id = localStorage.id 
+        fetch(`http://localhost:8000/users/${id}`, {
+            method: 'PATCH',
+            body: JSON.stringify({
+                monster_img: this.state.selectedMonster.image
+            }), 
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        .then(response => {
+            if (response.status === 201 || response.status === 200){
+                alert("Monster has been chosen")
+                }
+            return response.json()
+        }).then(result => console.log(result))
+        
+    }
     
 
     render() {
@@ -48,7 +68,7 @@ export default class ChooseMonsterPage extends Component {
                 <ul id="monster-selection">
                     {displayMonsters()}
                 </ul>
-                <button>Choose Monster</button>
+                <button onClick={this.handleMonsterUpdate}>Choose Monster</button>
                 </div>
                 
             </div>
