@@ -11,31 +11,24 @@ export default class ChooseMonsterPage extends Component {
         monsters: [
             {
                 name: "sam",
+                image: "https://i.imgur.com/4q9qAMg.png",
                 id: 1
             },
             {
                 name: "jill",
+                image: "https://i.imgur.com/mPBIm9X.png",
                 id: 2
             },
             {
                 name: "bob",
+                image: "https://i.imgur.com/HuuRZli.png",
                 id: 3
             }
         ]
     }
 
     handleClick= (monsterObj) => {
-        console.log(monsterObj)
-        if(this.state.checked){
-            this.setState({
-                checked: false,
-            })
-        }else{
-            this.setState({
-                checked: true,
-                selectedMonster: monsterObj
-            })
-        }
+            this.setState({selectedMonster: monsterObj})
     }
     
 
