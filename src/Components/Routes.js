@@ -15,7 +15,6 @@ export default function Routes(props) {
 
     const login = (user, history) => {
 
-        // console.log("login function has been reached", user)
         fetch('http://localhost:8000/login', {
           method: "POST",
           headers: {
@@ -25,11 +24,12 @@ export default function Routes(props) {
           //will make a key of user, will be equal to the information we send (object we pass in as user)
         })
         .then(response => response.json())
-        .then(({ name, username, token, id}) => {
+        .then(({ name, username, token, id, money }) => {
           localStorage.setItem('token', token)
           localStorage.setItem('name', name)
           localStorage.setItem('username', username)
           localStorage.setItem('id', id)
+          localStorage.setItem('money', money)
           history.push('/home')
         })
       }

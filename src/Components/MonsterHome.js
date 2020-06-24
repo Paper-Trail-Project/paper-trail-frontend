@@ -30,7 +30,7 @@ export default function MonsterHome() {
         
         <div id="money-container">
           <img src={money_icon} alt="money_icon" id="money-icon" />
-          <p>10000</p>
+          <p>{localStorage.money >= 0 ? localStorage.money : `You're broke!`}</p>
         </div>
 
         <div id="monster-container">
