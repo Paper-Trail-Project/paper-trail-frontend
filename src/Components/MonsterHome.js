@@ -1,49 +1,72 @@
 import React from "react";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import "../Styles/MonsterHome.css";
 import monster_droplet from "../Images/monster_droplet.svg";
 import money_icon from "../Images/money_icon.svg";
 import encyclopedia_icon from "../Images/encyclopedia_icon.svg";
+import face_off_icon from "../Images/face_off_icon.svg";
+import quest_icon from "../Images/quest_icon.svg";
+import shop_icon from "../Images/shop_icon.svg";
 //will have to import all monster images and then update the img src depending on user avatar
 
 export default function MonsterHome() {
   return (
     <>
-    {/* <p>Welcome, NAME</p> */}
-    <div id="container">
-      <div className="knowledge-monster-shop">
-        <div className="icon-container"></div>
-        <div className="icon-container">
-          <Link to="/encyclopedia">
+      {/* <p>Welcome, NAME</p> */}
+      <div id="container">
+        <div className="knowledge-monster-shop">
+          <div className="icon-container"></div>
+          <div className="icon-container">
+            <Link to="/encyclopedia">
+              <img
+                src={encyclopedia_icon}
+                alt="encyclopedia_icon"
+                id="encyclopedia-icon"
+              />
+            </Link>
+          </div>
+          <div className="icon-container"></div>
+        </div>
+
+        <div className="knowledge-monster-shop">
+          <div id="money-container">
+            <img src={money_icon} alt="money_icon" id="money-icon" />
+            <p>
+              {localStorage.money >= 0 ? localStorage.money : `You're broke!`}
+            </p>
+          </div>
+
+          <div id="monster-container">
             <img
-              src={encyclopedia_icon}
-              alt="encyclopedia_icon"
-              className="icon"
+              src={monster_droplet}
+              alt="monster_droplet"
+              id="monster-main"
             />
-          </Link>
-
-        </div>
-        <div className="icon-container"></div>
-      </div>
-
-      <div className="knowledge-monster-shop">
-        
-        <div id="money-container">
-          <img src={money_icon} alt="money_icon" id="money-icon" />
-          <p>{localStorage.money >= 0 ? localStorage.money : `You're broke!`}</p>
+          </div>
         </div>
 
-        <div id="monster-container">
-          <img src={monster_droplet} alt="monster_droplet" id="monster-main" />
-        </div>
-      </div>
+        <div className="knowledge-monster-shop">
 
-      <div className="knowledge-monster-shop">
-        <div className="icon-container"></div>
-        <div className="icon-container"></div>
-        <div className="icon-container"></div>
+          <div className="icon-container">
+            <img src={face_off_icon} 
+            id="face-off-icon"
+            alt="face_off_icon" 
+            />
+          </div>
+
+          <div className="icon-container" >
+            <img src={quest_icon} alt="quest_icon" 
+            id="quest-icon"/>
+          </div>
+
+          <div className="icon-container">
+            <img src={shop_icon} alt="shop_icon" 
+            id="shop-icon" />
+          </div>
+
+        </div>
+
       </div>
-    </div>
     </>
   );
 }

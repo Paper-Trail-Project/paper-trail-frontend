@@ -53,20 +53,26 @@ p {
 .icon-container{
   width: 65%;
   height: 20%;
-  margin: 10%;
-  background-color: grey;
+  margin: 4%;
+  /* background-color: grey; */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
 }
 
-.icon{
-  /* width: 100%; */
-  height: 100%
-  /* border: solid black;
-  border-radius: 50%; */
+#encyclopedia-icon{
+  /* need to figure out how to get this size with percentage!! */
+  width: 7em;
 }
 
-.icon:hover{
+#face-off-icon{
+  width: 100%;
+}
 
+#quest-icon{
+  width:100%;
+}
+
+#shop-icon{
+  width:100%;
 }
