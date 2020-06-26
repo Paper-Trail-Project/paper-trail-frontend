@@ -6,9 +6,11 @@ import LandingPage from './LandingPage'
 import PrivateRoute from './PrivateRoute';
 import ChooseMonsterPage from './ChooseMonsterPage'
 import Encyclopedia from './Encyclopedia'
+import NavButtons from './NavButtons'
 
 
 export default function Routes(props) {
+
 
 
   //need to revalidate a user upon refresh. Either componentDidMount or useEffect.
@@ -55,9 +57,9 @@ export default function Routes(props) {
 
     return (
         <div>
+          {localStorage.token ? <NavButtons/> : null}
             <Router>
                 <Switch>
-
                     <PrivateRoute exact path='/home' />
                     {/* if you want to pass a prop down, change component to render */}
                     {/* render takes a function, this function will return the component you want to go to (login) */}
