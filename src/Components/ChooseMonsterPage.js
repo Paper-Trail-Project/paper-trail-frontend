@@ -8,19 +8,20 @@ export default class ChooseMonsterPage extends Component {
 
     state = {
         selectedMonster: [],
+        monster_chosen: false,
         monsters: [
             {
-                name: "sam",
+                name: "Drop Monster",
                 image: "https://i.imgur.com/4q9qAMg.png",
                 id: 1
             },
             {
-                name: "jill",
+                name: "Star Monster",
                 image: "https://i.imgur.com/mPBIm9X.png",
                 id: 2
             },
             {
-                name: "bob",
+                name: "Robo Monster",
                 image: "https://i.imgur.com/HuuRZli.png",
                 id: 3
             }
@@ -44,10 +45,13 @@ export default class ChooseMonsterPage extends Component {
         })
         .then(response => {
             if (response.status === 201 || response.status === 200){
-                alert("Monster has been chosen")
+                this.setState({monster_chosen: true})
                 }
             return response.json()
-        }).then(result => console.log(result))
+        }).then(result => {
+            localStorage.setItem('monster_img', result[0].monster_img)
+        })
+        .then(result => this.props.history.push('/home'))
         
     }
     
@@ -69,6 +73,7 @@ export default class ChooseMonsterPage extends Component {
                     {displayMonsters()}
                 </ul>
                 <button onClick={this.handleMonsterUpdate}>Choose Monster</button>
+                {this.state.monster_chosen ? <p>You picked {this.state.selectedMonster.name}!</p> : null}
                 </div>
                 
             </div>
