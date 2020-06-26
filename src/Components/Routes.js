@@ -48,7 +48,7 @@ export default function Routes(props) {
         body: JSON.stringify(newUser)
       })
       .then(response => response.json())
-      .then(response => history.push('/choose_monster'))
+      .then(response => history.push('/login'))
       // .then(response => {
       //   localStorage.setItem('token', response.password)
       //   history.push('/home')
