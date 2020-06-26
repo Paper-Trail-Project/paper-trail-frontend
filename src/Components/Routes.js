@@ -24,14 +24,16 @@ export default function Routes(props) {
           //will make a key of user, will be equal to the information we send (object we pass in as user)
         })
         .then(response => response.json())
-        .then(({ name, username, token, id, money }) => {
+        .then(({ name, username, token, id, money, monster_img}) => {
+          console.log(name)
           localStorage.setItem('token', token)
           localStorage.setItem('name', name)
           localStorage.setItem('username', username)
           localStorage.setItem('id', id)
           localStorage.setItem('money', money)
-          history.push('/home')
+          localStorage.setItem('monster_img', monster_img)
         })
+        .then(result => {localStorage.monster_img === "null" ? history.push('/choose_monster') : history.push('/home')})
       }
 
     const signup = (newUser, history) => {
@@ -44,7 +46,7 @@ export default function Routes(props) {
         body: JSON.stringify(newUser)
       })
       .then(response => response.json())
-      .then(response => history.push('/home'))
+      .then(response => history.push('/choose_monster'))
       // .then(response => {
       //   localStorage.setItem('token', response.password)
       //   history.push('/home')

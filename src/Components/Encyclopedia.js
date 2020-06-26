@@ -116,7 +116,7 @@ export default function Encyclopedia() {
 
   return (
     <div className="container">
-      <ul>
+      <ul id="chapter-ul">
         {chapters.map((chapter) => (
           <>
           {/* <p>{chapter.sections[0]}</p> */}
