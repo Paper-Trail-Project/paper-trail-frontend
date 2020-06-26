@@ -108,6 +108,12 @@ export default function Encyclopedia() {
       title: "Banking",
       summary:
         "Learn what the difference between Checking and Savingd accounts and which one works for you!",
+        sections: [
+          {
+            title: "Banking Basics",
+            content: "Bolodfkhj",
+          },
+        ],
     },
   ];
 
