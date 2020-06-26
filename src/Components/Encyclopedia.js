@@ -44,6 +44,17 @@ export default function Encyclopedia() {
           content:
             "In general, traditional budgeting starts with tracking expenses, eliminating debt and, once the budget is balanced, building an emergency fund. But to speed up the process, you could start by building a partial emergency fund. This emergency fund acts as a buffer as the rest of the budget is put in place, and should replace the use of credit cards for emergency situations. The key is to build the fund at regular intervals, consistently devoting a certain percentage of each paycheck toward it and, if possible, putting in whatever you can spare on top. This will get you to think about your spending, too.",
         },
+        {
+          title: "What's an Emergency?",
+          content:
+            "You should only use the emergency money for true emergencies: like when you drive to work but your muffler stays at home, or your water heater starts to die. You would save money if you used your emergency fund to eliminate credit card debt, but the purpose of the fund is to prevent you from having to use your credit card for paying for unexpected expenses. With a proper emergency fund, you will not need your credit card to keep you afloat when something goes wrong.",
+        },
+        {
+          title: "Downsize and Substitute",
+          content:
+            "Now that you have a buffer between you and high-interest debt, it is time to start the process of downsizing. The more space you can create between your expenses and your income, the more income you will have to pay down debt and invest. This can be a process of substitution as much as elimination. For example, if you have a monthly gym membership, cancel it. Use half of the money you save to invest or pay off outstanding debts, and save the other half to begin building a home gym in your basement. Instead of buying coffee from a fancy coffee shop every day, invest in a coffee maker with a grinder and make your own, saving more money over the long term. Although eliminating expenses entirely is the fastest way to a solid budget, substitution tends to have more lasting effects. People often cut too deep and end up making a budget that they can't keep because it feels like they are giving up everything. Substitution, in contrast, keeps the basics while cutting down the costs.",
+        }
+
       ],
       quiz_questions: [
         {
